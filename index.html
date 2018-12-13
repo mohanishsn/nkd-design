@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nkd design | home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+  <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="./js/custom.js"></script>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.navbar-container').load('navbar.html');
+      $('.footer').load('footer.html');
+      $('.carousel').carousel();
+    });
+  </script>
+</head>
+
+<body>
+  <header style="border-bottom: 1px solid lightgray;">
+    <div class="container-fluid navbar-container"></div>
+  </header>
+
+  <main>
+    <!-- Carousel Start-->
+    <div style="position: relative;">
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="z-index: 0">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                <div class="img-caption">
+                  <span class="num-col">01</span>
+                  <hr class="num-line" />
+                  <h1>Architect's Pad</h1>
+                  <p>The architect's apartment was rerefurbished with a vintage look in mind</p>
+                  <a href="./architect-pad.html">view more</a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 img-wrapper">
+                <img src="img/architect_pad/DSC_0106.jpg" alt="Architect Pad Cover" class="img-fluid cover-img">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                <div class="img-caption">
+                  <span class="num-col">02</span>
+                  <hr class="num-line" />
+                  <h1>Valley House</h1>
+                  <p>Using bamboo and old packaging wood, landscape additions were made to this existing house</p>
+                  <a href="#">view more</a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 img-wrapper">
+                <img src="./img/valley_house/CoverImage.jpg" alt="Private House Cover" class="img-fluid cover-img">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                <div class="img-caption">
+                  <span class="num-col">03</span>
+                  <hr class="num-line" />
+                  <h1>Pashan Apartment</h1>
+                  <p>This 3 bedroom flat was refurbished using Portuguese Goan and Konkani motifs, giving a classic
+                    touch to the interiors.</p>
+                  <a href="./pashan-apartment.html">view more</a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 img-wrapper">
+                <img src="./img/pashan_apt/Coverpic3.JPG" alt="Pashan Apartment Cover" class="img-fluid cover-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <!-- <span>&nbsp;&nbsp;&nbsp;&nbsp;previous</span> -->
+          <!-- <span style="color: black;">&#8592;</span> -->
+          <!-- <span style="color: maroon;"><i class="fa fa-arrow-left"></i></i></span> -->
+          <span style="color: maroon;"><i class="icofont-thin-left"></i></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <!-- <span>next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></span> -->
+          <!-- <span style="color:black;">&#8594;</span> -->
+          <span style="color: maroon;"><i class="icofont-thin-right"></i></span>
+        </a>
+      </div>
+    </div>
+    <!-- Carousel End -->
+  </main>
+
+  <footer class="footer">
+  </footer>
+
+</body>
+
+</html>

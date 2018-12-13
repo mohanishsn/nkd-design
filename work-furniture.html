@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nkd design | furniture </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-container').load('navbar.html');
+            $('.footer').load('footer.html');
+        });
+    </script>
+    <style>
+        .card-img-bottom {
+            height: 600px !important;
+        }
+
+        .card-title {
+            font-weight: bolder !important;
+        }
+
+        .placeholder {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="border-bottom: 1px solid lightgray; margin-bottom: 20px;">
+        <div class="container-fluid navbar-container"></div>
+    </header>
+
+    <main>
+        <div class="container-fluid work-container">
+            <div class="row project-header">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <span style="font-size: 20px;">projects <i class="icofont-thin-right"></i> furniture</span>
+                </div>
+            </div>
+            <div class="row project-item" style="margin-bottom: 20px;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 img-wrap">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Series I</h5>
+                            <p class="card-text">A handcrafted stool made from richly polished genuine wood. Perfect
+                                for bedrooms or living rooms.</p>
+                        </div>
+                        <img class="card-img-bottom" src="./img/stools/series_1.jpg" alt="Series 1 Img">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <p><span class="placeholder">Material</span>: Acacia Wood</p>
+                                <p><span class="placeholder">Dimensions</span>: 12" top. 22" height</p>
+                                <p><span class="placeholder">Price</span>: INR 4100</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 img-wrap">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Series II</h5>
+                            <p class="card-text">A handcrafted stool made from richly polished genuine wood. Perfect
+                                for bars and breakfast islands.</p>
+                        </div>
+                        <img class="card-img-bottom" src="./img/stools/series_2.jpg" alt="Series 2 Img">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <p><span class="placeholder">Material</span>: Acacia Wood</p>
+                                <p><span class="placeholder">Dimensions</span>: 12" top. 32" height</p>
+                                <p><span class="placeholder">Price</span>: INR 4700</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+</body>
+
+</html>

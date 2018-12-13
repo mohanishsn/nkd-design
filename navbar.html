@@ -1,0 +1,69 @@
+<script>
+    $(document).ready(function() {
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+
+        // passes on every "a" tag
+        $(".navbar-collapse a").each(function() {
+            if (url == (this.href)) {
+                $(this).closest("a").addClass("active-link");
+            }
+        });
+    }); 
+</script>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="./index.html">
+        <img class="img-fluid" src="./img/nkd_logo.png" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./about.html">about</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    our work
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./work-residential.html">residential</a>
+                    <a class="dropdown-item" href="#">commercial</a>
+                    <a class="dropdown-item" href="./work-landscape.html">landscape</a>
+                    <a class="dropdown-item" href="./work-furniture.html">furniture</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#blog-coming-soon">blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contact.html">contact</a>
+            </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+    </div>
+</nav>
+<div class="modal fade" id="blog-coming-soon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span>Coming Soon!</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

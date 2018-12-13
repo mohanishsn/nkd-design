@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nkd design | contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.err').css("visibility", "hidden");
+            $('.footer').load('footer.html');
+            $('.navbar-container').load('navbar.html');
+            
+            $('.btn-dark').click(function() {
+                
+                var emReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                var telReg = /^[0-9]{10}$/;
+                
+                if($('#nameField').val()==null || $('#nameField').val()=="") {
+                    alert("Name field can not be empty");
+                    $('#nameField').focus();
+                } else if(!telReg.test($('#telField').val())) {
+                    alert("Telephone field can not be empty");
+                    $("#telField").focus();
+                } else if(!emReg.test($('#emailField').val())) {
+                    alert("Invalid email");
+                }
+
+                else {
+                    var name = $('#nameField').val();
+                    var tel = $('#telField').val();
+                    var project = $('#projectField').val();
+                    var budget = $('#budgetField').val();
+                    console.log("hello", name+''+tel+''+project+''+budget);
+
+                    $.ajax({
+                        type: "POST",
+                        url: "form-send.php",
+                        data: "name="+name+"&tel="+tel+"&project="+project+"&budget="+budget,
+                    }).done(function(msg) {
+                        alert("Message Sent "+msg);
+                        $('#enquiryForm').each(function() {
+                            this.reset();
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header style="border-bottom: 1px solid lightgray;">
+        <div class="container-fluid navbar-container"></div>
+    </header>
+
+    <main>
+        <div class="container-fluid contact-container">
+            <div class="row" style="margin-top: 25px;">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                    <div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h5>Contact</h5>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <div style="margin-bottom: 5px;">+91 9607203112</div>
+                                <div>
+                                    <a class="emailid" href="mailto:nkddesign.in@gmail.com">nkddesign.in@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <address>
+                                    S6, Rohan Chambers, Opposite Karve Statue, <br />
+                                    Karve Road, Pune - 411038
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="contact-separator">
+                    <div class="form-container">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h5>Enquiry form</h5>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px;">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <form action="" method="" id="enquiryForm">
+                                    <div class="form-group row">
+                                        <label for="nameField" class="col-form-label col-xl-2 col-lg-2 col-md-2 col-sm-3">Name:
+                                        </label>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                            <input class="form-control form-control-sm" type="text" id="nameField"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="emailField" class="col-form-label col-xl-2 col-lg-2 col-md-2 col-sm-3">Email:
+                                        </label>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                            <input class="form-control form-control-sm" type="email" id="emailField"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="telField" class="col-form-label col-xl-2 col-lg-2 col-md-2 col-sm-3">Phone:
+                                        </label>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                            <input class="form-control form-control-sm" type="tel" id="telField"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="projectField" class="col-form-label col-xl-2 col-lg-2 col-md-2 col-sm-3">Project:
+                                        </label>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                            <select class="custom-select" id="projectField">
+                                                <option value="Residential">Residential</option>
+                                                <option value="Commercial">Commercial</option>
+                                                <option value="Landscape">Landscape</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="budgetField" class="col-form-label col-xl-2 col-lg-2 col-md-2 col-sm-3">Budget:
+                                        </label>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                            <select class="custom-select" id="budgetField">
+                                                <option value="5-10L">5-10L</option>
+                                                <option value="10-25L">10-25L</option>
+                                                <option value="> 25L">> 25L</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 btn-contact-submit">
+                                            <input type="button" class="btn btn-dark" value="Submit" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="contact-separator">
+                    <div class="career-container">
+                        <div class="row" style="margin-top: 25px;">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h5>Careers</h5>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <span>If you are interested in working with us, send your CV and a portfolio to <a
+                                        class="emailid" href="mailto:nkddesign.in@gmail.com">nkddesign.in@gmail.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 map-wrapper">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=rohan%20chambers%2C%20rahul%20nagar%20road&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>

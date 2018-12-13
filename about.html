@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nkd design | about</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.navbar-container').load('navbar.html');
+            $('.footer').load('footer.html');
+        });
+    </script>
+    <style>
+        /* .img-fluid {
+            max-width: unset !important;
+        } */
+    </style>
+</head>
+
+<body>
+    <header style="border-bottom: 1px solid lightgray;">
+        <div class="container-fluid navbar-container"></div>
+    </header>
+
+    <main class="about-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 about-img">
+                    <img class="img-fluid" src="./img/about/about-portrait.jpg" />
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 about-text">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <h1>about us</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <p>
+                                We are a multi-disciplinary firm providing services in architecture, interior design
+                                and
+                                landscape. Our ethos is to create a livable and comfortable space which is sustainable
+                                and
+                                connected to nature. We actively encourage vernacular products and practices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row about-data" style="margin-top: 50px;">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <span style="font-size: 14pt; font-weight: bold;">Thinking of Design?</span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <span style="font-size: 14pt; font-weight: bold;">Let's craft brilliance together</span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 contact-div">
+                            <a href="./contact.html" class="contact-link">get in touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nkd design | landscape </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-container').load('navbar.html');
+            $('.footer').load('footer.html');
+        });
+    </script>
+</head>
+
+<body>
+    <header style="border-bottom: 1px solid lightgray; margin-bottom: 20px;">
+        <div class="container-fluid navbar-container"></div>
+    </header>
+
+    <main>
+        <div class="container-fluid" style="padding: 0px 40px;">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;">
+                    <span style="font-size: 20px;">projects <i class="icofont-thin-right"></i> landscape</span>
+                </div>
+            </div>
+            <div class="row project-item" style="margin-bottom: 20px;">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 img-wrap">
+                    <img class="bottom-layer img-fluid" src="./img/work-img/pvt-pune-landscape.jpg" alt="Private Pune Landscape" />
+                    <div class="top-layer">
+                        <div class="img-desc">
+                            <h4>Private House Landscape</h4>
+                            <p>This house in the city was refurbished extensively to suit modern needs
+                                and to make it more comfortable, manageable and inviting.
+                            </p>
+                            <a href="./private-house-landscape.html" class="project-link">View more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+</body>
+
+</html>

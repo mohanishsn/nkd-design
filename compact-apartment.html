@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>project | compact apartment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-container').load('navbar.html');
+            $('.footer').load('footer.html');
+        });
+    </script>
+</head>
+
+<body>
+    <header style="border-bottom: 1px solid lightgray;">
+        <div class="container-fluid navbar-container"></div>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row project-control-row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="project-controls">
+                        <a href="javascript:history.go(-1);"><i class="icofont-long-arrow-left"></i></a>
+                        <!-- <a href="./architect-pad.html">Next project&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 15px;">
+                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+                    <div class="project-caption sm-padding-text">
+                        <h3 style="font-weight: bolder;">Compact Apartment</h3>
+                        <p>This small new apartment had to be furnished with a minimal and clean design approach. As
+                            the budget was Spartan, conscious designs were made using limited resources and instead
+                            focus was on making the space more functional.</p>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 work-cover">
+                    <img src="img/compact_apt/Coverpic2.jpg" class="img-fluid" alt="Compact Apartment Cover" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 15px;">
+                    <img src="./img/compact_apt/DSC_0265.jpg" class="img-fluid" />
+                </div>
+                <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 15px;">
+                    <img src="./img/private_pune/DSC_0887.JPG" class="img-fluid" />
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <img src="./img/private_pune/DSC_0909.JPG" class="img-fluid" />
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+</body>
+
+</html>
