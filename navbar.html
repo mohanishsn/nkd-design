@@ -9,6 +9,22 @@
                 $(this).closest("a").addClass("active-link");
             }
         });
+
+        // applies active link class on index page by default
+        if($(location).attr('pathname')=="/") {
+            $(".nav-link").first().addClass("active-link");
+        }
+
+        $('.dropdown-toggle, .dropdown-menu').hover(
+            function() {
+                $('.dropdown-toggle').find('i').removeClass('icofont-plus');
+                $('.dropdown-toggle').find('i').addClass('icofont-minus');
+            },
+            function() {
+                $('.dropdown-toggle').find('i').removeClass('icofont-minus');
+                $('.dropdown-toggle').find('i').addClass('icofont-plus');
+            }
+        );
     }); 
 </script>
 
@@ -32,7 +48,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    our work
+                    our work <i class="icofont-plus"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./work-residential.html">residential</a>
